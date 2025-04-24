@@ -1,0 +1,42 @@
+# Architecture Diagram for Cucumber Growth Stages Detection
+
+## Components and Description
+- [Image Acquisition Layer]
+  Devices: iPhone 12 & 14 Pro Max
+  Conditions: Various lighting, angles, occlusions
+
+- [Preprocessing & Augmentation Layer]
+  Techniques: Resize (224x224), Normalization, Rotation, Flipping, Zoom, Brightness, Blur
+
+- [Model Input]
+  Augmented Images
+
+- [CNN-Based Feature Extraction]
+  Pretrained Models: EfficientNetV2, ResNet50, VGG16
+  Layers: Convolution → Pooling → Flatten
+
+- [Classification Layer]
+  Fully Connected Layers
+  Activation: SoftMax
+  Output: Growth Stages (Flowering, Pollination, Mature, Ripen, Overripen)
+
+- [Model Evaluation]
+  Metrics: Accuracy, Precision, Recall, F1 Score, Confusion Matrix
+
+- [Deployment]
+  Platform: Python
+  Libraries: TensorFlow, Keras, OpenCV
+  Hardware: GPU for training
+  Interface: Web-based interface (user-friendly, device-independent)
+  Cloud-based deployment for scalability
+  Real-time inference
+  IoT devices such as cameras or sensors for real-time cucumber plant monitoring
+
+- [Field Visualization]
+  Output Mapping: Visual Layout of Plant Growth Stages
+
+## Connections
+- Image Acquisition → Preprocessing & Augmentation → Model Input
+- Preprocessing & Augmentation → CNN-Based Feature Extraction → Classification Layer
+- Classification Layer → Model Evaluation → Deployment
+- Deployment → Field Visualization (Real-time Output)
